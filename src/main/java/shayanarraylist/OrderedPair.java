@@ -20,17 +20,17 @@ public class OrderedPair {
                 continue;
             }
             System.out.println("bfd " + inputList);
-            System.out.println("size of liest" + inputList.size());
+            System.out.println("remaing  of list" + inputList.size());
             System.out.println("under att i :" + i);
-            System.out.println(inputList.get(i - 1));
-            System.out.println(inputList.get(i - 2));
+            System.out.println("right node : "+inputList.get(i - 1));
+            System.out.println("left node : "+inputList.get(i - 2));
             if (inputList.get(i - 1) > inputList.get(i - 2)) {
                 inputList.remove(i - 1);
                 inputList.remove(i - 2);
                 i = i - 2;
             }
             System.out.println("afd " + inputList);
-            System.out.println();
+            System.out.println("------------------------");
 
         }
 

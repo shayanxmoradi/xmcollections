@@ -34,6 +34,7 @@ public class ShayanMap {
         return "";
     }
 
+
     public static boolean isSamePermutationX(String word1, String word2) {
         if (word1.length() != word2.length()) {
             return false;
@@ -64,18 +65,26 @@ public class ShayanMap {
         return true;
     }
 
+    /**
+     * String buffer is thread safe
+     *
+     * @param input
+     * @return a string
+     */
     public static String removeRepetitiveChars(String input) {
         if (input == null || input.isEmpty()) {
             return input;
         }
 
         StringBuilder result = new StringBuilder();
-        HashSet<Character> seen = new HashSet<>();
 
+        HashSet<Character> seen = new HashSet<>();
+        String resulat = "";
         for (char c : input.toCharArray()) {
             if (!seen.contains(c)) {
                 seen.add(c);
                 result.append(c);
+                resulat += c;
             }
         }
 
